@@ -11,11 +11,16 @@
     docker push wsarachai/ubuntu-itsci:latest
     docker push wsarachai/ubuntu-itsci:linux-amd64
     ```
-## # Create the container
+### Create the container
     ```
-    docker run -h "itsci_mju_ac_th" -u itsci --workdir /home/itsci --name ubuntu-itsci -it --rm wsarachai/ubuntu-itsci:latest
-    docker run -h "itsci_mju_ac_th" -u itsci --workdir /home/itsci --name ubuntu-itsci -it --rm wsarachai/ubuntu-itsci:linux-amd64
+    docker run -h "ITSCI" -u <ชื่อของนักศึกษา> --workdir /home/itsci --name ubuntu-itsci -it --rm wsarachai/ubuntu-itsci:latest
+    docker run -h "ITSCI" -u <ชื่อของนักศึกษา> --workdir /home/itsci --name ubuntu-itsci -it --rm wsarachai/ubuntu-itsci:linux-amd64
     ```
+- เช่น หากต้องการให้ชื่อเป็น "itsci" ให้ใช้คำสั่งต่อไปนี้
+    ```
+    docker run -h "ITSCI" -u itsci --workdir /home/itsci --name ubuntu-itsci -it --rm wsarachai/ubuntu-itsci:latest
+    ```
+
 ## Locales in Dockerfile
 Given that it is a minimal install of Ubuntu, this image only includes the C, C.UTF-8, and POSIX locales by default. For most uses requiring a UTF-8 locale, C.UTF-8 is likely sufficient (-e LANG=C.UTF-8 or ENV LANG C.UTF-8).
 

@@ -6,9 +6,14 @@ RUN apt-get update && apt-get -y install vim
 RUN apt-get update && apt-get -y install wget
 RUN apt-get update && apt-get -y install tree
 RUN apt-get update && apt-get -y install git
+RUN apt-get update && apt-get -y install -y ncal
 RUN echo 'root:1234' | chpasswd
 RUN adduser itsci
 RUN usermod -aG sudo itsci
 RUN echo 'itsci:1234' | chpasswd
+RUN mkdir /home/itsci/Desktop
+RUN mkdir /home/itsci/Documents
+RUN mkdir /home/itsci/Download
+RUN chown itsci:itsci -R /home/itsci
 
 ENV LANG en_US.utf8
