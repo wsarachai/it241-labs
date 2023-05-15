@@ -34,6 +34,7 @@ target/
 
 # Compiled Files
 *.class
+target/
 bin/
 build/
 /bin1/
