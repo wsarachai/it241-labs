@@ -7,6 +7,7 @@ RUN apt-get update && apt-get -y install wget
 RUN apt-get update && apt-get -y install tree
 RUN apt-get update && apt-get -y install git
 RUN apt-get update && apt-get -y install -y ncal
+RUN apt-get update && apt-get -y install coreutils
 RUN echo 'root:1234' | chpasswd
 RUN adduser itsci
 RUN usermod -aG sudo itsci
