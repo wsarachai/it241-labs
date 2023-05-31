@@ -8,3 +8,12 @@
     docker run --name ubuntu-itsci -it --rm wsarachai/ubuntu-itsci:latest
 #### 4.2 สำหรับระบบปฏิบัติการ Window ให้ใช้คำสั่งนี้
     docker run --name ubuntu-itsci -it --rm wsarachai/ubuntu-itsci:linux-amd64
+
+## Lab 02
+
+## Run the container
+    ```
+    docker run --name itsci-mysql -v C:\mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1234 -d --rm -p 3306:3306 wsarachai/mysql-itsci:latest
+    ```
+
+
