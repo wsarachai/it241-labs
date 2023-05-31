@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   mysql:
-    image: "wsarachai/mysql-itsci:linux-amd64"
+    image: "wsarachai/mysql-itsci:latest"
     restart: always
     command:
       - "--collation-server=utf8mb4_unicode_ci"
@@ -24,18 +24,18 @@ services:
 #    depends_on:
 #      - mysql
 
-#  phpmyadmin:
-#    image: phpmyadmin
-#    restart: always
-#    volumes:
-#      - ./misc-data/phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
-#    ports:
-#      - "3333:80"
-#    depends_on:
-#      - mysql
-#    environment:
-#      - PMA_ARBITRARY=1
-#
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    volumes:
+      - ./misc-data/phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
+    ports:
+      - "3333:80"
+    depends_on:
+      - mysql
+    environment:
+      - PMA_ARBITRARY=1
+
 #  wordpress:
 #    image: wordpress
 #    restart: always
